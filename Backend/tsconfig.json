@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "module": "ESNext", // or "ES6" depending on your Node.js version
+    "target": "ESNext", // or "ES6"
+    "moduleResolution": "node",
+    "esModuleInterop": true, // To support CommonJS modules while still using ES module syntax
+    "skipLibCheck": true,    // To skip type-checking of declaration files
+    "forceConsistentCasingInFileNames": true,
+    "outDir": "./dist", // Output directory for compiled JS
+    "strict": true, // Optional: to enable stricter type checks
+    "resolveJsonModule": true, // If you're importing JSON files
+    "allowJs": true // Allows JavaScript files to be imported
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules"]
+}
