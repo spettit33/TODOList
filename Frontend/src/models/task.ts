@@ -1,6 +1,6 @@
 export const validPriorities = ['LOW', 'MEDIUM', 'HIGH'] as const;
 
-type Priority = typeof validPriorities[number];
+export type Priority = typeof validPriorities[number];
 
 export const validStatuses = ['COMPLETE', 'INPROGRESS', 'BACKLOG'] as const;
 
@@ -14,3 +14,5 @@ export interface ITask {
     CreatedAt?: Date;
     Status: Status;
 }
+
+export const colorMap: Map<Priority, string> = new Map([["LOW","text-green-500"], ["MEDIUM", "text-yellow-500"], ["HIGH", "text-red-500"]]);
