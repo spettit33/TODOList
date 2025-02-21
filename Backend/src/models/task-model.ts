@@ -1,11 +1,11 @@
 import mongoose from "mongoose";
 
 const taskSchema = new mongoose.Schema({
-    category: {
+    Name: {
         type: String,
         required: true,
     },
-    Importance: {
+    Priority: {
         type: String,
         enum: ['LOW', 'MEDIUM', 'HIGH'],
         required: true,
@@ -21,6 +21,9 @@ const taskSchema = new mongoose.Schema({
     Status : {
         type: String,
         enum: ['COMPLETE', 'INPROGRESS', 'BACKLOG']
+    },
+    Deadline: {
+        type: Date 
     }
 });
 
