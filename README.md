@@ -28,5 +28,5 @@ Before getting started, you need to have the following installed:
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/yourusername/todo-app.git
-cd todo-app
+git clone https://github.com/spettit33/TODOList.git
+cd TODOList
