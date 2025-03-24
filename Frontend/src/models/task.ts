@@ -4,9 +4,10 @@ export type Priority = typeof validPriorities[number];
 
 export const validStatuses = ['COMPLETE', 'INPROGRESS', 'BACKLOG'] as const;
 
-type Status = typeof validStatuses[number];
+export type Status = typeof validStatuses[number];
 
 export interface ITask {
+    Id: string;
     Name: string;
     Description?: string;
     Deadline?: Date;

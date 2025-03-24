@@ -1,4 +1,5 @@
 import mongoose from "mongoose";
+import { User } from "./user-model.js";
 
 const taskSchema = new mongoose.Schema({
     Name: {
@@ -11,20 +12,25 @@ const taskSchema = new mongoose.Schema({
         required: true,
         unique: true,
     },
-    CreatedAt : {
+    CreatedAt: {
         type: Date,
-        default: Date.now
+        default: Date.now,
     },
     Description: {
         type: String,
     },
-    Status : {
+    Status: {
         type: String,
-        enum: ['COMPLETE', 'INPROGRESS', 'BACKLOG']
+        enum: ['COMPLETE', 'INPROGRESS', 'BACKLOG'],
     },
     Deadline: {
-        type: Date 
-    }
+        type: Date,
+    },
+    User: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'User', 
+        required: true,
+    },
 });
 
-const Task = mongoose.model('Task', taskSchema);
+export const Task = mongoose.model('Task', taskSchema);
